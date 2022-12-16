@@ -4,9 +4,8 @@ const getUserByEmail = (searchEmail) => users.find((object) => object.email === 
 
 export const signup = (data) => {
   if (getUserByEmail(data.email)) {
-    console.log("this email already exists")
-  } else {
-    users.push(data)
+    throw new Error('existent_email')
   }
+  users.push(data)
   return true
 }
