@@ -2,7 +2,7 @@ import { Router } from 'express'
 
 import { signup, login } from './userService' // we make it explict { signup } because there's no export default in the userService file
 
-const AUTH_COOKIE_NAME = 'autorization'
+const AUTH_COOKIE_NAME = 'authorization'
 
 const router = Router()
 router.post('/signup', (request, response) => {
